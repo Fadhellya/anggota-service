@@ -16,13 +16,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class AnggotaService {
     @Autowired
-    private RepositoryAnggota repositoryAnggota;
+    private RepositoryAnggota anggotaRepository;
     
     public Anggota saveAnggota(Anggota anggota){
-        return repositoryAnggota.save(anggota);
-    }
-    public Anggota findAnggotaById(Long anggotaId){
-        return repositoryAnggota.findByAnggotaId(anggotaId);
+        return anggotaRepository.save(anggota);
     }
     
+    public Anggota findAnggotaById(Long anggotaId){
+        return anggotaRepository.findByAnggotaId(anggotaId);
+    }
 }
